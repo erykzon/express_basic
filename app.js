@@ -9,6 +9,12 @@ app.get('/',(req, res) => {
 app.get('/Launchx',(req, res) => {
     res.send("Launch x express")
 })
+app.get('/node',(req, res) => {
+    const explorer1 = {id: 1, name: "Explorer" }
+    const explorer2 = {id: 2, name: "Explorer" }
+    const explorer3 = {id: 3, name: "Explorer" }
+    res.send([explorer1, explorer2, explorer3])
+})
 
 app.listen(port, () =>{
     console.log("Server listo!")

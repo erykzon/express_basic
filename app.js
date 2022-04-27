@@ -26,6 +26,13 @@ app.get('/explorersInNode',(req, res) => {
     console.log(explorer)//{explorer:'el nombre que ingresamos '}
     res.send(explorer)
 })
+// query Params: Recibir paramtetros por la url 
+//http://localhost:3000/explorer/erykzon
+//req.params = {"explorerName":"erykzon""}
+app.get('/explorers/:explorerName',(req, res) => {
+    console.log(req.params)//req.params = {"explorerName":"erykzon""}
+    res.send(req.params)
+})
 
 
 app.listen(port, () =>{

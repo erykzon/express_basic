@@ -17,9 +17,16 @@ app.get('/node',(req, res) => {
 })
 // localhost explorer erykzon
 app.get('/explorers/:explorer',(req, res) => {
-    console.log(req.params)
+    console.log(req.params)//{explorer:'el nombre que ingresamos '}
     res.send(req.params)
 })
+// localhost:3000/explorersInNode
+app.get('/explorersInNode',(req, res) => {
+    const explorer = { name: "Explorer",msg: "Hello"}
+    console.log(explorer)//{explorer:'el nombre que ingresamos '}
+    res.send(explorer)
+})
+
 
 app.listen(port, () =>{
     console.log("Server listo!")

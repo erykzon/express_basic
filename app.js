@@ -58,6 +58,16 @@ app.post('/v1/explorers', (req, res) =>{
     res.status(201).json({message: "Creado exitosamente"})
 
 })
+// Metodo PUT es para actualizar
+app.put('/v1/explorers/:id', (req, res) =>{
+    console.log(`PUT Explorers V1 API ${new Date()}`)
+    console.log(req.body)// parametros para actualzar
+    console.log(req.params.id)// parametros para actualizar
+    // Agregar la logica para persistir
+    res.status(200).json({message: "Actualizado exitosamente"})
+
+})
+
 
 
 app.listen(port, () =>{

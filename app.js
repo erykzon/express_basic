@@ -63,8 +63,15 @@ app.put('/v1/explorers/:id', (req, res) =>{
     console.log(`PUT Explorers V1 API ${new Date()}`)
     console.log(req.body)// parametros para actualzar
     console.log(req.params.id)// parametros para actualizar
-    // Agregar la logica para persistir
+    // Agregar la logica para actualizar
     res.status(200).json({message: "Actualizado exitosamente"})
+
+})
+// Metodo DELETE para borrar EL REGSITRO
+app.delete('/v1/explorers/:id', (req, res) =>{
+    console.log(`DELETE Explorers V1 API ${new Date()}`)
+    // Agregar la logica para eliminar
+    res.status(200).json({message: "Eliminado exitosamente"})
 
 })
 

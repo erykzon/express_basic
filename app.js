@@ -43,6 +43,13 @@ app.get('/v1/explorers',(req, res) => {
     const explorers = [explorer1, explorer2]
     res.status(200).json(explorers)
 })
+app.get('/v1/explorers/:id',(req, res) => {
+    console.log(`GET by id V1 API ${new Date()}`)
+    const explorer1 = { id: 1, name: "Explorer1"}
+    res.status(200).json(explorer1)
+})
+
+
 
 
 app.listen(port, () =>{

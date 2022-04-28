@@ -43,13 +43,21 @@ app.get('/v1/explorers',(req, res) => {
     const explorers = [explorer1, explorer2]
     res.status(200).json(explorers)
 })
+//Los metodos GET son para regresar info 
 app.get('/v1/explorers/:id',(req, res) => {
     console.log(`GET by id V1 API ${new Date()}`)
     const explorer1 = { id: 1, name: "Explorer1"}
     res.status(200).json(explorer1)
 })
 
+//Los metodos post son para crear informacion
+app.post('/v1/explorers', (req, res) =>{
+    console.log(`POST Explorers V1 API ${new Date()}`)
+    // Agregar la logica para persistir
+    console.log(req.body)// parametros del request
+    res.status(201).json({message: "Creado exitosamente"})
 
+})
 
 
 app.listen(port, () =>{

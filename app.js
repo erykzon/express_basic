@@ -33,6 +33,16 @@ app.get('/explorers/:explorerName',(req, res) => {
     console.log(req.params)//req.params = {"explorerName":"erykzon""}
     res.send(req.params)
 })
+// Esto es un endpoint
+//routes
+//Methods HTTP, GET, POST, DELETE
+app.get('/v1/explorers',(req, res) => {
+    console.log(`GET Explorers V1 API ${new Date()}`)
+    const explorer1 = { id: 1, name: "Explorer1"}
+    const explorer2 = { id: 2, name: "Explorer2"}
+    const explorers = [explorer1, explorer2]
+    res.status(200).json(explorers)
+})
 
 
 app.listen(port, () =>{
